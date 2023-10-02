@@ -31,11 +31,29 @@
             out.innerHTML = `Wrong Guess! oops: ${oops}`;
         }
     }
+    useImage = 1;
+
+        function selectImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById('city').src ="ooty.jpg";
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById('city').src ="ladakh.jpg";
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById('city').src ="karimnagar.jpg";
+                    useImage = 1;
+                    break;
+                default:
+                    break;
+            }
+        }
 </script>
-
-
-
-    
-
+<div>
+    <img id="city" src="karimnagar.jpg" width="100" height="100" onclick="selectImage()">
+</div>
 </body>
 </html> 
