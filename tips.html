@@ -17,7 +17,7 @@
 
 <button onclick="tips()">Show tip</button>
 
-<p id="result">Please click on show tip to show tip amount</p>
+<p id="result"></p>
 
 <form>
     <input type="radio" id="calcSum" name="operation" value="sum" onclick="chooseOp()">
@@ -30,7 +30,7 @@
     <label for="calcMult">mult</label><br>
 </form>
 
-  <p id="operation_Result"></p>
+  <p id="compute_Result"></p>
 
 <script> 
 
@@ -45,7 +45,6 @@ function tips() {
                 const calculatedTip = (base_Amount * tipLevel) / 100;
                 toShow += `${tipLevel}% is ${calculatedTip.toFixed(1)}; `;
             }
-            // const tip_Amount = (base_Amount * tip_Percent) / 100;
 
             document.getElementById('result').textContent = `Tips are: ${toShow}`;
         }
@@ -55,26 +54,26 @@ function chooseOp() {
         
         const operation = document.querySelector('input[name="operation"]:checked').value;
         
-        const base1 = parseFloat(document.getElementById('form1_baseAmount').value);
-        const tip1 = parseFloat(document.getElementById('form1_tipPercent').value);
+        const baseO = parseFloat(document.getElementById('form1_baseAmount').value);
+        const tipO = parseFloat(document.getElementById('form1_tipPercent').value);
         
-        let calcResult;
+        let computeOperation;
 
         switch (operation) {
 		        case "sum":
-                    calcResult = `Sum of ${base1} and ${tip1} is ${base1 + tip1}`;
+                computeOperation = `Sum of ${baseO} and ${tipO} is ${baseO + tipO}`;
                     break;
                 case "difference":
-                    calcResult = `Difference between ${base1} and ${tip1} is ${base1 - tip1}`;
+                computeOperation = `Difference between ${baseO} and ${tipO} is ${baseO - tipO}`;
                     break;
                 case "product":
-                    calcResult = `Product of ${base1} and ${tip1} is ${base1 * tip1}`;
+                computeOperation = `Product of ${baseO} and ${tipO} is ${baseO * tipO}`;
                     break;
                 default:
-                    calcResult = "Please select Either Sum or Difference or Multiplication";
+                computeOperation = "Please click on a radio button";
             }
 
-            document.getElementById('operation_Result').textContent = `${calcResult}`;
+            document.getElementById('compute_Result').textContent = `${computeOperation}`;
     }
 
 </script>
