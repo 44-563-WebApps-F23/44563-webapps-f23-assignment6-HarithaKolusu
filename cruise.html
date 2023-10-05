@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Exploring Cruise</title></head>
+    <head><title>Exploring Cruise</title>
+        <style>
+            #cruise_Select_Output{
+                color: blue;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </head>
 <body>
 
 <h2>Haritha Kolusu goes on a cruise</h2>
-
+<br>
 <form>
     <input type="checkbox" id="SharesCabin" name="Shares Cabin" checked>
     <label for="SharesCabin">Shares Cabin</label><br>
@@ -15,8 +27,8 @@
     <input type="checkbox" id="PoolPass" name="Pool Pass">
     <label for="PoolPass">Pool Pass</label><br><br>
 </form>
-<button onclick="selectCruise()">Select a cruise</button>
-<p id="cruise_Select_Output"></p>
+<button class="btn btn-primary" onclick="selectCruise()">Select a cruise</button>
+<b><p id="cruise_Select_Output"></p></b>
 <br>
 <form>
     <label for="days">Enter the number of days</label>
@@ -27,7 +39,7 @@
     
 </form>
 <button onclick="updateCruise()">Update the cruise</button>
-<p id="cruise_Update_Output"></p>
+<b><p id="cruise_Update_Output"></p></b>
 
 
 <script> 
